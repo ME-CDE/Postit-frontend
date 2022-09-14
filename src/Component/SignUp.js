@@ -28,7 +28,7 @@ const SignUp = () => {
     if (data.redirect) {
       setError(initialError);
       setTimeout(() => {
-        window.location.assign(data.redirect);
+        link(data.redirect);
       }, 300);
     }
     if (data.errors) {
@@ -37,7 +37,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="SignUp bg-greyishWhite/[0.94] w-screen h-screen flex justify-center items-center fixed top-0 left-0 overflow-y-scroll">
+    <div className="SignUp bg-greyishWhite/[0.94] w-screen h-screen flex justify-center items-center fixed top-0 left-0 overflow-y-hidden">
       <div
         className="text-primaryBlack w-[653px] h-[773px] max-w-full max-h-full bg-almostWhite shadow rounded-[3px] flex flex-col justify-center items-center relative"
         id="content"

@@ -34,7 +34,7 @@ const Login = () => {
   const style = error.email? { borderBottom: "1px solid red" }: { borderBottom: "" };
   const style2 = error.password? { borderBottom: "1px solid red" } : { borderBottom: "" };
   return (
-    <div className="SignIn bg-greyishWhite/[0.94] w-screen h-screen flex justify-center items-center fixed top-0 left-0 overflow-y-scroll">
+    <div className="SignIn bg-greyishWhite/[0.94] w-screen h-screen flex justify-center items-center fixed top-0 left-0 overflow-y-hidden">
       <div
         className="text-primaryBlack w-[653px] h-[773px] max-w-full max-h-full bg-almostWhite shadow rounded-[3px] flex flex-col justify-center items-center relative"
         id="content"
