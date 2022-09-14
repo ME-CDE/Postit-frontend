@@ -1,0 +1,16 @@
+.homecontent, .Home{
+  scrollbar-width: 0;
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar{
+  display: none;
+  width:0;
+}
+@media (max-height:666px) {
+   .SignUp, .SignIn{
+    align-items: flex-start !important;
+  }
+  .SignUp #content, .SignIn #content{
+    max-height: 667px !important; 
+  }
+}
