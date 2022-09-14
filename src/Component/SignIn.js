@@ -40,18 +40,18 @@ const Login = () => {
         id="content"
       >
         <CgClose
-          className="absolute top-[34px] right-[32px] text-2xl"
+          className="absolute top-[3%] smallest:top-[5%] right-[5.7%] text-2xl"
           onClick={() => link("/")}
         />
         <h3 className=" text-4xl w-max font-bold leading-[60px] mb-3">
           Welcome Back
         </h3>
-        <form className="flex flex-col sm:w-8/12 w-4/5 h-[270px] xs:h-[305px] mb-10 justify-start">
+        <form className="flex flex-col sm:w-8/12 w-4/5 h-[305px] mb-10 justify-start">
           <input
             type="email"
             id="email"
             placeholder="Your email address"
-            className="w-full py-[25px] xs:py-[34px] border-primaryBlack border-b text-center outline-none placeholder-primaryBlack bg-transparent"
+            className="w-full py-[34px] border-primaryBlack border-b text-center outline-none placeholder-primaryBlack bg-transparent"
             style={style}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -65,7 +65,7 @@ const Login = () => {
             type="password"
             id="password"
             placeholder="password"
-            className="w-full py-[25px] xs:py-[34px] border-primaryBlack border-b text-center outline-none placeholder-primaryBlack bg-transparent"
+            className="w-full py-[34px] border-primaryBlack border-b text-center outline-none placeholder-primaryBlack bg-transparent"
             style={style2}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -77,7 +77,7 @@ const Login = () => {
           )}
           <button
             type="submit"
-            className="w-full h-[47px] bg-primaryBlue rounded-[7px] mt-[69px] text-white font-bold"
+            className="w-full h-[47px] bg-primaryBlue rounded-[7px] mt-[69px] text-white font-bold text-[20px]"
             onClick={handleSubmit}
           >
             Continue

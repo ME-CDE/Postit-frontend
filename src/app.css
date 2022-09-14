@@ -7,12 +7,22 @@
   width:0;
 }
 @media (max-height:655px){
-   .SignUp, .SignIn{
+   .SignUp{
     align-items: flex-start !important;
     overflow-y: scroll !important;
   }
-  .SignUp #content, .SignIn #content{
+  .SignUp #content{
     max-height: 667px !important; 
     height: 667px !important; 
   }
+}
+@media (max-height:599px){
+  .SignIn{
+   align-items: flex-start !important;
+   overflow-y: scroll !important;
+ }
+ .SignIn #content{
+   max-height: 600px !important; 
+   height: 600px !important; 
+ }
 }

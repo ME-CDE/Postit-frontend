@@ -53,13 +53,13 @@ const SignUp = () => {
           Enter your email address to create an account on Post
           <span className="text-primaryBlue">it</span>.
         </p>
-        <form className="flex flex-col sm:w-8/12 w-4/5 h-[305px] xs:h-[365px]">
+        <form className="flex flex-col sm:w-8/12 w-4/5 h-[365px]">
           <input
             type="text"
             name="username"
             id="name"
             placeholder="Username"
-            className="w-full py-[25px] xs:py-[34px] border-primaryBlack border-b text-center outline-none placeholder-primaryBlack bg-transparent"
+            className="w-full py-[34px] border-primaryBlack border-b text-center outline-none placeholder-primaryBlack bg-transparent"
             style={style1}
             value={username}
             onChange={(e) => setUsername(e.target.value)}
@@ -73,7 +73,7 @@ const SignUp = () => {
             type="email"
             id="email"
             placeholder="Your email address"
-            className="w-full py-[25px] xs:py-[34px] border-primaryBlack border-b text-center outline-none placeholder-primaryBlack bg-transparent"
+            className="w-full py-[34px] border-primaryBlack border-b text-center outline-none placeholder-primaryBlack bg-transparent"
             style={style2}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -99,7 +99,7 @@ const SignUp = () => {
           )}
           <button
             type="submit"
-            className="w-full h-[47px] bg-primaryBlue rounded-[5px] mt-[38px] text-white font-bold"
+            className="w-full h-[47px] bg-primaryBlue rounded-[5px] mt-[38px] text-white font-bold text-[20px]"
             onClick={handleSubmit}
           >
             Continue
