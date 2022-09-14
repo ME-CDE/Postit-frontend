@@ -13,5 +13,6 @@
   .SignUp #content, .SignIn #content{
     max-height: 667px !important;
     height: 667px !important;
+    overflow-y: hidden !important;
   }
 }
