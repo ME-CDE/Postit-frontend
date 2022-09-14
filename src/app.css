@@ -10,8 +10,8 @@
    .SignUp, .SignIn{
     align-items: flex-start !important;
   }
-  .SignUp #content, .SignIn #content{
+  /* .SignUp #content, .SignIn #content{
     max-height: 667px !important; 
     height: 667px !important; 
-  }
+  } */
 }
