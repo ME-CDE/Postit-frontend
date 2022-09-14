@@ -59,7 +59,7 @@ const SignUp = () => {
             name="username"
             id="name"
             placeholder="Username"
-            className="w-full py-[34px] border-primaryBlack border-b text-center outline-none placeholder-primaryBlack bg-transparent"
+            className="w-full py-[25px] xs:py-[34px] border-primaryBlack border-b text-center outline-none placeholder-primaryBlack bg-transparent"
             style={style1}
             value={username}
             onChange={(e) => setUsername(e.target.value)}
@@ -73,7 +73,7 @@ const SignUp = () => {
             type="email"
             id="email"
             placeholder="Your email address"
-            className="w-full py-[34px] border-primaryBlack border-b text-center outline-none placeholder-primaryBlack bg-transparent"
+            className="w-full py-[25px] xs:py-[34px] border-primaryBlack border-b text-center outline-none placeholder-primaryBlack bg-transparent"
             style={style2}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -87,7 +87,7 @@ const SignUp = () => {
             type="password"
             id="password"
             placeholder="password"
-            className="w-full py-[34px] border-primaryBlack border-b text-center outline-none placeholder-primaryBlack bg-transparent"
+            className="w-full py-[25px] xs:py-[34px] border-primaryBlack border-b text-center outline-none placeholder-primaryBlack bg-transparent"
             style={style3}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
