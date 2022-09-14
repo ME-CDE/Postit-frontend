@@ -53,7 +53,7 @@ const SignUp = () => {
           Enter your email address to create an account on Post
           <span className="text-primaryBlue">it</span>.
         </p>
-        <form className="flex flex-col sm:w-8/12 w-4/5">
+        <form className="flex flex-col sm:w-8/12 w-4/5 h-[305px] xs:h-[365px]">
           <input
             type="text"
             name="username"

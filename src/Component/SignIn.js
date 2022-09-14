@@ -46,7 +46,7 @@ const Login = () => {
         <h3 className=" text-4xl w-max font-bold leading-[60px] mb-3">
           Welcome Back
         </h3>
-        <form className="flex flex-col sm:w-8/12 w-4/5">
+        <form className="flex flex-col sm:w-8/12 w-4/5 h-[270px] xs:h-[305px] mb-10 justify-start">
           <input
             type="email"
             id="email"
@@ -65,7 +65,7 @@ const Login = () => {
             type="password"
             id="password"
             placeholder="password"
-            className="w-full py-[25px] xs:py-[34px] pt-14 border-primaryBlack border-b text-center outline-none placeholder-primaryBlack bg-transparent"
+            className="w-full py-[25px] xs:py-[34px] border-primaryBlack border-b text-center outline-none placeholder-primaryBlack bg-transparent"
             style={style2}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -77,7 +77,7 @@ const Login = () => {
           )}
           <button
             type="submit"
-            className="w-full h-[47px] bg-primaryBlue rounded-[7px] mt-[69px] mb-10 text-white font-bold"
+            className="w-full h-[47px] bg-primaryBlue rounded-[7px] mt-[69px] text-white font-bold"
             onClick={handleSubmit}
           >
             Continue
