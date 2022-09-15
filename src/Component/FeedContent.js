@@ -7,7 +7,7 @@ const FeedContent = () => {
   const link = useNavigate()
   const {id} = useParams()
   const allBlog = async()=>{
-    const res = await fetch("https://postiitt.herokuapp.com//blogs")
+    const res = await fetch("https://postiitt.herokuapp.com/blogs")
     const data = await res.json()
     setData(data)
   }
