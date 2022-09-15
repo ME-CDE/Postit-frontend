@@ -11,6 +11,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(email,password);
     const res = await fetch("https://postiitt.herokuapp.com/signin", {
       method: "POST",
       body: JSON.stringify({
