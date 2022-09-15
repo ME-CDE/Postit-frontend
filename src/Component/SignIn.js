@@ -9,10 +9,27 @@ const Login = () => {
   const [error, setError] = useState(initialError);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(email,password);
-   
+    const res = await fetch("http://localhost:7500/signin", {
+      method: "POST",
+      body: JSON.stringify({
+        email: email,
+        password: password,
+      }),
+      headers: { "Content-Type": "application/json" },
+      credentials: "include",
+    });
+    const data = await res.json();
+    if (data.redirect) {
+      setError(initialError);
+      setTimeout(() => {
+        link(data.redirect);
+      }, 300);
+    }
+    if (data.errors) {
+      setError(data.errors);
+    }
   };
   const style = error.email? { borderBottom: "1px solid red" }: { borderBottom: "" };
   const style2 = error.password? { borderBottom: "1px solid red" } : { borderBottom: "" };
@@ -23,7 +40,7 @@ const Login = () => {
         id="content"
       >
         <CgClose
-          className="absolute top-[3%] smallest:top-[5%] right-[5.7%] text-2xl"
+          className="absolute top-[34px] right-[32px] text-2xl"
           onClick={() => link("/")}
         />
         <h3 className=" text-4xl w-max font-bold leading-[60px] mb-3">
