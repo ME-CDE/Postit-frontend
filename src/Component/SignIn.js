@@ -18,7 +18,7 @@ const Login = () => {
         password: password,
       }),
       headers: { "Content-Type": "application/json" },
-      credentials: "include",
+      // credentials: "include",
     });
     const data = await res.json();
     if (data.redirect) {
