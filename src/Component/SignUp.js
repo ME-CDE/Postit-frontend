@@ -15,7 +15,7 @@ const SignUp = () => {
   
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await fetch("http://localhost:7500/signup", {
+    const res = await fetch("https://postiitt.herokuapp.com/signup", {
       method: "POST",
       body: JSON.stringify({
         username: username,

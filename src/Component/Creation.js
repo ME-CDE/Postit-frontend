@@ -5,7 +5,7 @@ const Creation = ({ownerId, date}) => {
   const link = useNavigate();
   const [data, setData] = useState(null)
   const creator = async()=>{
-    const res = await fetch(`http://localhost:7500/readmore/${ownerId}`,{
+    const res = await fetch(`https://postiitt.herokuapp.com/readmore/${ownerId}`,{
         method: "GET",
         headers: {"Content-Type": "application/json"},
         credentials:"include"

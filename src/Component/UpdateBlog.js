@@ -32,7 +32,7 @@ const UpdateBlog = () => {
     if (ids.length !== 24){
       return link("/error")
     }
-    const res = await fetch(`http://localhost:7500/blogs?blog=${ids}`)
+    const res = await fetch(`https://postiitt.herokuapp.com/blogs?blog=${ids}`)
     const data = await res.json()
     if (data.redirect) {
       return link(data.redirect)
@@ -46,7 +46,7 @@ const UpdateBlog = () => {
   }, [])
   const update = async(e)=>{
     e.preventDefault()
-    const res =await fetch(`http://localhost:7500/blogs?ownerId=${id}&blog=${ids}`,{
+    const res =await fetch(`https://postiitt.herokuapp.com/blogs?ownerId=${id}&blog=${ids}`,{
       method:"PATCH",
       body:JSON.stringify({
         title:title, 

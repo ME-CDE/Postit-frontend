@@ -11,7 +11,7 @@ const MyPost = () => {
   const [name] = useOutletContext();
   useAuth(id,link)
   const allBlogs = async()=>{
-    const res = await fetch(`http://localhost:7500/blogs?ownerId=${id}`)
+    const res = await fetch(`https://postiitt.herokuapp.com/blogs?ownerId=${id}`)
     const datas = await res.json()
     setData(datas)
   }
@@ -20,7 +20,7 @@ const MyPost = () => {
   }, [])
   const handleDelete=async(e,ids)=>{
     e.preventDefault()
-    const res = await fetch(`http://localhost:7500/blogs?ownerId=${id}&blog=${ids}`,{
+    const res = await fetch(`https://postiitt.herokuapp.com/blogs?ownerId=${id}&blog=${ids}`,{
       method: "DELETE",
       headers: {"Content-Type": "application/json"},
     })

@@ -6,7 +6,7 @@ const MainApp = () => {
   const {id} = useParams();
   const [dta, setDta] = useState({})
   const data = async()=>{
-    const res = await fetch(`http://localhost:7500/app/${id}`, {
+    const res = await fetch(`https://postiitt.herokuapp.com/app/${id}`, {
       method: "GET",
       headers: {"Content-Type": "application/json"},
       credentials:"include"

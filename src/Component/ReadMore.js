@@ -18,13 +18,13 @@ const ReadMore = () => {
     if (ids.length !== 24){
       return link("/error")
     }
-    const res = await fetch(`http://localhost:7500/blogs?blog=${ids}`)
+    const res = await fetch(`https://postiitt.herokuapp.com/blogs?blog=${ids}`)
     const data = await res.json()
     if (data.redirect) {
       return link(data.redirect)
     }else{
       setData(data)
-      const res = await fetch(`http://localhost:7500/readmore/${data.ownerId}`,{
+      const res = await fetch(`https://postiitt.herokuapp.com/readmore/${data.ownerId}`,{
         method: "GET",
         headers: {"Content-Type": "application/json"},
         credentials:"include"

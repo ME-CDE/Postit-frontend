@@ -34,7 +34,7 @@ const CreatePost = () => {
       categories: e.target[1].value,
       content:e.target[2].value,
     }
-    fetch(`http://localhost:7500/blogs`,{
+    fetch(`https://postiitt.herokuapp.com/blogs`,{
       method: "POST",
       body: JSON.stringify(body),
       headers: {"Content-Type": "application/json"},
