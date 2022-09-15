@@ -12,8 +12,9 @@ const MainApp = () => {
       credentials:"include"
     })
     const data = await res.json()
+    console.log(data);
     if (data.redirect) {
-      link(data.redirect)
+      // link(data.redirect)
     }else{
       setDta(data)
     }
