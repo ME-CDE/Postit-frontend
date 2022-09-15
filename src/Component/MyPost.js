@@ -93,11 +93,11 @@ const MyPost = () => {
               );
             })}
           </div>
-          {(data.length === 0) && (
+          {data.length === 0 && 
             <div className="w-10/12 mx-auto h-52 flex justify-center items-center text-primaryBlack/[0.3] text-3xl">
               <p className="w-max">No Blog yet.</p>
             </div>
-          )}
+          }
         </>
       )}
       <Footer />
