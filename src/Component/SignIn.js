@@ -23,9 +23,7 @@ const Login = () => {
     const data = await res.json();
     if (data.redirect) {
       setError(initialError);
-      setTimeout(() => {
         link(data.redirect);
-      }, 300);
     }
     if (data.errors) {
       setError(data.errors);
