@@ -17,7 +17,7 @@ const Login = () => {
         email: email,
         password: password,
       }),
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "Authorization" },
       credentials: "include",
     });
     const data = await res.json();
