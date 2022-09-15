@@ -12,25 +12,25 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(email,password);
-    const res = await fetch("https://postiitt.herokuapp.com/signin", {
-      method: "POST",
-      body: JSON.stringify({
-        email: email,
-        password: password,
-      }),
-      headers: { "Content-Type": "application/json" },
-      credentials: "include",
-    });
-    const data = await res.json();
-    if (data.redirect) {
-      setError(initialError);
-      setTimeout(() => {
-        link(data.redirect);
-      }, 300);
-    }
-    if (data.errors) {
-      setError(data.errors);
-    }
+    // const res = await fetch("https://postiitt.herokuapp.com/signin", {
+    //   method: "POST",
+    //   body: JSON.stringify({
+    //     email: email,
+    //     password: password,
+    //   }),
+    //   headers: { "Content-Type": "application/json" },
+    //   credentials: "include",
+    // });
+    // const data = await res.json();
+    // if (data.redirect) {
+    //   setError(initialError);
+    //   setTimeout(() => {
+    //     link(data.redirect);
+    //   }, 300);
+    // }
+    // if (data.errors) {
+    //   setError(data.errors);
+    // }
   };
   const style = error.email? { borderBottom: "1px solid red" }: { borderBottom: "" };
   const style2 = error.password? { borderBottom: "1px solid red" } : { borderBottom: "" };
