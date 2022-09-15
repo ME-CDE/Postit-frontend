@@ -9,7 +9,7 @@ const Login = () => {
   const [error, setError] = useState(initialError);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log(email,password);
     // const res = await fetch("https://postiitt.herokuapp.com/signin", {
