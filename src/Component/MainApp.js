@@ -24,7 +24,7 @@ const MainApp = () => {
   }, [])
   return (
     <div className='MainApp font-harmattan overflow-x-hidden'>
-      {data && <Outlet context={[dta]}/>}
+      {dta && <Outlet context={[dta]}/>}
     </div>
   )
 }
