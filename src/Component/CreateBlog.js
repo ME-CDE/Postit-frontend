@@ -29,11 +29,12 @@ const CreatePost = () => {
     e.preventDefault();
     const body = {
       ownerId: id,
-      title: e.target[0].value,
-      categories: e.target[1].value,
-      content: e.target[2].value,
+      title: e.target[1].value,
+      categories: e.target[2].value,
+      content: e.target[3].value,
       coverImage:image
     };
+    console.log(body);
     fetch(`https://postiitt.herokuapp.com/blogs`, {
       method: "POST",
       body: JSON.stringify(body),
