@@ -44,8 +44,7 @@ const CreatePost = () => {
         return res.json();
       })
       .then((data) => {
-        // console.log(data);
-        link(`/app/${id}/post`);
+        link(data.redirect);
       });
   };
   return (
