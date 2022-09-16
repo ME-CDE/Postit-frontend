@@ -55,7 +55,7 @@ const ReadMore = () => {
       <> 
       <Nav data={name}/>
       <div className="w-[86%] xs:w-10/12 mx-auto">
-        <img src={data.coverImage} alt="coverImage" className="w-full rounded-lg"/>
+        <img src={data.coverImage} alt="coverImage" className="w-full rounded-xl mt-14"/>
         <p className="w-max px-3 text-[17px] text-[#FDFEFF] rounded-md mt-[43px]" style={style}>{data.categories}</p>
         <h1 className="font-bold text-[35px] xxxs:text-[40px] xxs:text-[47px] xs:text-[52px] sm:text-[56px] md:text-[58px] lg:text-[62px] 2xl:w-[1300px] max-w-[100%] leading-[1.1em] mt-[28px] mb-[22.5px] text-primaryBlack">{data.title}</h1>
         <div className="w-full border-b pb-[26.7px] border-[#DDDDDD] mb-14">

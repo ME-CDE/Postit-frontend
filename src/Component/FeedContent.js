@@ -21,6 +21,7 @@ const FeedContent = () => {
         data.map((blog)=>{
           return(
             <div className='max-w-[379px] resize' key={blog._id}>
+              <img src={blog.coverImage} alt="" className="w-full rounded-lg"/>
             <h1 className=" font-semibold text-[28px] leading-[50px] max-w-[587px] mb-4 break-words">{blog.title}</h1>
             <Creation ownerId={blog.ownerId} date={blog.createdAt}/>
             <p className="w-full text-[16px] leading-[27px] break-words">{`${blog.content}`.substring(0, 200)}<span className=" text-primaryBlue font-bold block cursor-pointer" onClick={()=> link(`/app/${id}/readmore/${blog._id}`)}><BsArrowRight className='inline-block'/> Read More...</span></p>
