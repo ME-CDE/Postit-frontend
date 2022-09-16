@@ -9,17 +9,23 @@ import { IoMdClose } from "react-icons/io";
 
 const CreatePost = () => {
   const [image, setImage] = useState("");
+  const [logic, setLogic] = useState(false)
   const { id } = useParams();
   const link = useNavigate();
   const [name] = useOutletContext();
   useAuth(id,link)
   function images() {
     const Reader = new FileReader();
-    const imageFile = document.getElementById("fileImage");
+    const imageFile = document.getElementById("fileImage")
     if (imageFile.files[0]) {
       Reader.readAsDataURL(imageFile.files[0]);
       Reader.onload = () => {
         setImage(Reader.result);
+        if (imageFile.files[0].size < 725) {
+          setLogic(true)
+        }else{
+          setLogic(false)
+        }
         imageFile.value = "";
         console.log(imageFile.files[0]);
       };
@@ -35,17 +41,18 @@ const CreatePost = () => {
       coverImage:image
     };
     console.log(body);
-    fetch(`https://postiitt.herokuapp.com/blogs`, {
+    if(logic){
+      fetch(`https://postiitt.herokuapp.com/blogs`, {
       method: "POST",
       body: JSON.stringify(body),
       headers: { "Content-Type": "application/json" },
     })
-      .then((res) => {
+    .then((res) => {
         return res.json();
-      })
-      .then((data) => {
+    })
+    .then((data) => {
         link(data.redirect);
-      });
+    });}
   };
   return (
     <div className="w-screen">
@@ -63,7 +70,7 @@ const CreatePost = () => {
               Cover Image
             </h1>
             <p className=" text-base ml-2">
-              File types supported: JPG, PNG. Max size: 5 MB
+              File types supported: JPG, PNG. Max size: 1 MB
             </p>
           </div>
           <div className="w-full flex items-center flex-col">
