@@ -41,8 +41,8 @@ const CreatePost = () => {
       content: e.target[3].value,
       coverImage: image,
     };
-    console.log(body);
     if (logic) {
+      console.log("normal");
       // fetch(`https://postiitt.herokuapp.com/blogs`, {
       //   method: "POST",
       //   body: JSON.stringify(body),
