@@ -9,25 +9,26 @@ import { IoMdClose } from "react-icons/io";
 
 const CreatePost = () => {
   const [image, setImage] = useState("");
-  const [logic, setLogic] = useState(false)
+  const [logic, setLogic] = useState(false);
   const { id } = useParams();
   const link = useNavigate();
   const [name] = useOutletContext();
-  useAuth(id,link)
+  useAuth(id, link);
   function images() {
     const Reader = new FileReader();
-    const imageFile = document.getElementById("fileImage")
+    const imageFile = document.getElementById("fileImage");
     if (imageFile.files[0]) {
       Reader.readAsDataURL(imageFile.files[0]);
       Reader.onload = () => {
         setImage(Reader.result);
         if (imageFile.files[0].size < 725) {
-          setLogic(true)
-        }else{
-          setLogic(false)
+          setLogic(true);
+          console.log(imageFile.files[0].size);
+        } else {
+          setLogic(false);
+          console.log(imageFile.files[0].size);
         }
         imageFile.value = "";
-        console.log(imageFile.files[0]);
       };
     }
   }
@@ -38,21 +39,22 @@ const CreatePost = () => {
       title: e.target[1].value,
       categories: e.target[2].value,
       content: e.target[3].value,
-      coverImage:image
+      coverImage: image,
     };
     console.log(body);
-    if(logic){
-      fetch(`https://postiitt.herokuapp.com/blogs`, {
-      method: "POST",
-      body: JSON.stringify(body),
-      headers: { "Content-Type": "application/json" },
-    })
-    .then((res) => {
-        return res.json();
-    })
-    .then((data) => {
-        link(data.redirect);
-    });}
+    if (logic) {
+      // fetch(`https://postiitt.herokuapp.com/blogs`, {
+      //   method: "POST",
+      //   body: JSON.stringify(body),
+      //   headers: { "Content-Type": "application/json" },
+      // })
+      //   .then((res) => {
+      //     return res.json();
+      //   })
+      //   .then((data) => {
+      //     link(data.redirect);
+      //   });
+    }
   };
   return (
     <div className="w-screen">
