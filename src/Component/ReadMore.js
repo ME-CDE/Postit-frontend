@@ -20,19 +20,11 @@ const ReadMore = () => {
     }
     const res = await fetch(`https://postiitt.herokuapp.com/blogs?blog=${ids}`)
     const data = await res.json()
-    if (data.categories === "Technology") {
-      setStyle({backgroundColor:"#6397E5"})
-    }else if(data.categories === "Nature") {
-      setStyle({backgroundColor:"#41D750"})
-    }else if(data.categories === "Sports") {
-      setStyle({backgroundColor:"#F42A2A"})
-    }else if(data.categories === "Lifestyle") {
-      setStyle({backgroundColor:"#E5BF5E"})
-    }
     if (data.redirect) {
       return link(data.redirect)
     }else{
       setData(data)
+      console.log(data.coverImage);
       const res = await fetch(`https://postiitt.herokuapp.com/readmore/${data.ownerId}`,{
         method: "GET",
         headers: {"Content-Type": "application/json"},
@@ -43,6 +35,15 @@ const ReadMore = () => {
         return link(data.redirect)
       }
       setData2(datas)
+      if (data.categories === "Technology") {
+        setStyle({backgroundColor:"#6397E5"})
+      }else if(data.categories === "Nature") {
+        setStyle({backgroundColor:"#41D750"})
+      }else if(data.categories === "Sports") {
+        setStyle({backgroundColor:"#F42A2A"})
+      }else if(data.categories === "Lifestyle") {
+        setStyle({backgroundColor:"#E5BF5E"})
+      }
     }
   }
   useEffect(() => {
