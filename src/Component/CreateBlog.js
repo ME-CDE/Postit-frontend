@@ -21,12 +21,10 @@ const CreatePost = () => {
       Reader.readAsDataURL(imageFile.files[0]);
       Reader.onload = () => {
         setImage(Reader.result);
-        if (imageFile.files[0].size < 725) {
+        if (imageFile.files[0].size < 1025) {
           setLogic(true);
-          console.log(imageFile.files[0].size);
         } else {
           setLogic(false);
-          console.log(imageFile.files[0].size);
         }
         imageFile.value = "";
       };
@@ -42,18 +40,17 @@ const CreatePost = () => {
       coverImage: image,
     };
     if (logic) {
-      console.log("normal");
-      // fetch(`https://postiitt.herokuapp.com/blogs`, {
-      //   method: "POST",
-      //   body: JSON.stringify(body),
-      //   headers: { "Content-Type": "application/json" },
-      // })
-      //   .then((res) => {
-      //     return res.json();
-      //   })
-      //   .then((data) => {
-      //     link(data.redirect);
-      //   });
+      fetch(`https://postiitt.herokuapp.com/blogs`, {
+        method: "POST",
+        body: JSON.stringify(body),
+        headers: { "Content-Type": "application/json" },
+      })
+        .then((res) => {
+          return res.json();
+        })
+        .then((data) => {
+          link(data.redirect);
+        });
     }
   };
   return (
