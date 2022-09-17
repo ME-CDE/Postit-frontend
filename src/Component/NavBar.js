@@ -27,7 +27,7 @@ const NavBar = () => {
             onClick={() => setSide(!side)}
           />
           {side && (
-            <ul className=" fixed top-0 right-0 bg-almostWhite w-full xxs:w-9/12 h-screen  text-[24px] flex flex-col gap-y-[30px] pl-10 pt-28 z-10 md:hidden shadow-xl">
+            <ul className=" fixed top-0 right-0 bg-almostWhite w-full xxs:w-9/12 h-screen  text-[24px] flex flex-col gap-y-[30px] pl-10 pt-28 md:hidden shadow-xl z-[200]">
               <CgClose
                 className="absolute top-[34px] right-[32px] text-3xl"
                 onClick={() => setSide(false)}

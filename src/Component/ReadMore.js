@@ -6,12 +6,14 @@ import Footer from "./Footer";
 import {BsTwitter} from "react-icons/bs"
 import {AiFillFacebook} from "react-icons/ai"
 import {RiWhatsappFill} from "react-icons/ri"
+import {BarLoader} from "react-spinners"
 const ReadMore = () => {
   const { id, ids } = useParams();
   const [name] = useOutletContext();
   const link = useNavigate();
   const [data, setData] = useState("")
-  const [data2, setData2] = useState("")
+  const [data2, setData2] = useState(null)
+  let [loading, setLoading] = useState(true);
   const [style, setStyle] = useState({backgroundColor:"#000000"})
   useAuth(id,link)
   const singleBlogs = async()=>{
@@ -50,10 +52,10 @@ const ReadMore = () => {
   }, [])
   return (
     <div className='w-screen'>
+      <Nav data={name}/>
       {data2 &&
       <> 
-      <Nav data={name}/>
-      <div className="w-[86%] xs:w-10/12 mx-auto">
+      <div className="w-[86%] xs:w-10/12 mx-auto" onLoad={()=>setLoading(false)}>
         <img src={data.coverImage} alt="coverImage" className="w-full rounded-xl mt-20"/>
         <p className="w-max px-3 text-[17px] text-[#FDFEFF] rounded-md mt-[43px]" style={style}>{data.categories}</p>
         <h1 className="font-bold text-[35px] xxxs:text-[40px] xxs:text-[47px] xs:text-[52px] sm:text-[56px] md:text-[58px] lg:text-[62px] 2xl:w-[1300px] max-w-[100%] leading-[1.1em] mt-[28px] mb-[22.5px] text-primaryBlack">{data.title}</h1>
@@ -63,9 +65,14 @@ const ReadMore = () => {
         <p className="mb-[67px] text-[18px] smallest:text-[18px] xxs:text-[20px] xs:text-[22px] sm:text-[24px] md:text-[26px] leading-[1.7em] text-[#7B7B7B]">{data.content}</p>
         <p className="mb-[108px] text-[24px] xs:text-[28px] leading-10 text-left">Share Post  :<BsTwitter className="text-[#55ACEE] inline-block ml-[24px]"/><AiFillFacebook className="text-[#395185] inline-block ml-[20px] mr-[20px]"/><RiWhatsappFill className="text-[#00E676] inline-block"/></p>
       </div>
-      <Footer/>
       </>
       }
+      {!data2 && 
+        <div className="w-[86%] xs:w-10/12 mx-auto h-96 flex justify-center items-center">
+          <BarLoader color="#292929" height={1.9} cssOverride={{opacity:"0.5"}} width={90} loading={loading}/>
+        </div>
+      }
+      <Footer/>
     </div>
   )
 }
