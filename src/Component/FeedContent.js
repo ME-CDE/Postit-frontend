@@ -18,6 +18,11 @@ const FeedContent = () => {
   },[])
   return (
     <div className='w-screen'>
+      {loading && 
+        <div className="w-[87%] xs:w-10/12 mx-auto h-96 flex justify-center items-center">
+          <BarLoader height={1.9} cssOverride={{opacity:"0.5"}} width={90} loading={loading}/>
+        </div>
+      }
       <div className='max-w-[87%] xxs:max-w-[90%] w-max mx-auto grid sm:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 justify-center gap-x-[51px] gap-y-[68px] mt-[69px] mb-[100px]' onLoad={()=>setLoading(false)}>
       {data &&
         data.map((blog)=>{
@@ -32,11 +37,6 @@ const FeedContent = () => {
         })
       }
       </div>
-      {loading && 
-        <div className="w-[86%] xs:w-10/12 mx-auto h-96 flex justify-center items-center">
-          <BarLoader height={1.9} cssOverride={{opacity:"0.5"}} width={90} loading={loading}/>
-        </div>
-      }
     </div>
   )
 }
