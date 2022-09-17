@@ -8,8 +8,8 @@ const NavBar = () => {
   const [side, setSide] = useState(false);
   const {id} = useParams();
   return (
-      <nav className="navBar w-full bg-almostWhite h-[92px] relative z-10 shadow-[0_4px_5px_-2px_rgba(0,0,0,0.25)]">
-        <div className="w-10/12 mx-auto h-full flex items-center justify-between text-primaryBlack z-50">
+      <nav className="navBar w-full bg-almostWhite h-[92px] relative shadow-[0_4px_5px_-2px_rgba(0,0,0,0.25)] z-[100]">
+        <div className="w-10/12 mx-auto h-full flex items-center justify-between text-primaryBlack ">
           <h3 className=" text-4xl w-max font-bold cursor-pointer" onClick={() => link(`/app/${id}`)}>
             Post<span className="text-primaryBlue">it</span>.
           </h3>
@@ -27,7 +27,7 @@ const NavBar = () => {
             onClick={() => setSide(!side)}
           />
           {side && (
-            <ul className=" fixed top-0 right-0 bg-almostWhite w-full xxs:w-9/12 h-screen  text-[24px] flex flex-col gap-y-[30px] pl-10 pt-28 md:hidden shadow-xl z-50">
+            <ul className="mainSide fixed top-0 right-0 bg-almostWhite w-full xxs:w-9/12 h-screen  text-[24px] flex flex-col gap-y-[30px] pl-10 pt-28 md:hidden shadow-xl">
               <CgClose
                 className="absolute top-[34px] right-[32px] text-3xl"
                 onClick={() => setSide(false)}
