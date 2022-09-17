@@ -76,7 +76,7 @@ const CreatePost = () => {
             </p>
           </div>
           <div className="w-full flex items-center flex-col">
-            <div className="resize w-full h-[50vw] xs:h-[50vw] relative border-[3px] border-dashed rounded-xl flex justify-center items-center">
+            <div className="resize w-full h-[60vw] xs:h-[50vw] relative border-[3px] border-dashed rounded-xl flex justify-center items-center">
               {image && (
                 <div className="w-full h-full rounded-xl flex justify-center items-center absolute">
                   <IoMdClose
