@@ -32,25 +32,25 @@ const CreatePost = () => {
   }
   const handleSubmit = (e) => {
     e.preventDefault();
-    const body = {
-      ownerId: id,
-      title: e.target[1].value,
-      categories: e.target[2].value,
-      content: e.target[3].value,
-      coverImage: image,
-    };
     if (logic) {
-      // fetch(`https://postiitt.herokuapp.com/blogs`, {
-      //   method: "POST",
-      //   body: JSON.stringify(body),
-      //   headers: { "Content-Type": "application/json" },
-      // })
-      //   .then((res) => {
-      //     return res.json();
-      //   })
-      //   .then((data) => {
-      //     link(data.redirect);
-      //   });
+      const body = {
+        ownerId: id,
+        title: e.target[1].value,
+        categories: e.target[2].value,
+        content: e.target[3].value,
+        coverImage: image,
+      };
+      fetch(`https://postiitt.herokuapp.com/blogs`, {
+        method: "POST",
+        body: JSON.stringify(body),
+        headers: { "Content-Type": "application/json" },
+      })
+        .then((res) => {
+          return res.json();
+        })
+        .then((data) => {
+          link(data.redirect);
+        });
     }
     if(!logic){
       alert("Please provide an image less than 1mb")
