@@ -9,7 +9,7 @@ const NavBar = () => {
   const {id} = useParams();
   return (
       <nav className="navBar w-full bg-almostWhite h-[92px] relative z-10 shadow-[0_4px_5px_-2px_rgba(0,0,0,0.25)]">
-        <div className="w-10/12 mx-auto h-full flex items-center justify-between text-primaryBlack ">
+        <div className="w-10/12 mx-auto h-full flex items-center justify-between text-primaryBlack z-50">
           <h3 className=" text-4xl w-max font-bold cursor-pointer" onClick={() => link(`/app/${id}`)}>
             Post<span className="text-primaryBlue">it</span>.
           </h3>
