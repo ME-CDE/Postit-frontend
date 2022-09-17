@@ -21,7 +21,7 @@ const CreatePost = () => {
       Reader.readAsDataURL(imageFile.files[0]);
       Reader.onload = () => {
         setImage(Reader.result);
-        if (imageFile.files[0].size < 1025) {
+        if (imageFile.files[0].size < 10480000) {
           setLogic(true);
         } else {
           setLogic(false);
