@@ -40,17 +40,20 @@ const CreatePost = () => {
       coverImage: image,
     };
     if (logic) {
-      fetch(`https://postiitt.herokuapp.com/blogs`, {
-        method: "POST",
-        body: JSON.stringify(body),
-        headers: { "Content-Type": "application/json" },
-      })
-        .then((res) => {
-          return res.json();
-        })
-        .then((data) => {
-          link(data.redirect);
-        });
+      // fetch(`https://postiitt.herokuapp.com/blogs`, {
+      //   method: "POST",
+      //   body: JSON.stringify(body),
+      //   headers: { "Content-Type": "application/json" },
+      // })
+      //   .then((res) => {
+      //     return res.json();
+      //   })
+      //   .then((data) => {
+      //     link(data.redirect);
+      //   });
+    }
+    if(!logic){
+      alert("Please provide an image less than 1mb")
     }
   };
   return (
