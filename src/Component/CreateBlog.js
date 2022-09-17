@@ -80,7 +80,7 @@ const CreatePost = () => {
               {image && (
                 <div className="w-full h-full rounded-xl flex justify-center items-center absolute">
                   <IoMdClose
-                    className=" text-2xl absolute top-[7%] right-[6%] z-50 text-almostWhite"
+                    className=" text-2xl absolute top-[7%] right-[6%] z-40 text-almostWhite"
                     onClick={() => setImage("")}
                   />
                   <img
@@ -94,7 +94,7 @@ const CreatePost = () => {
                 htmlFor="fileImage"
                 className="w-[98.5%] h-[97%] flex items-center justify-center hover:bg-[#757575]/[0.3] rounded-xl relative z-30"
               >
-                <BsImageFill className=" text-7xl opacity-[0.05]  relative z-50" />
+                <BsImageFill className=" text-7xl opacity-[0.05]  relative z-40" />
               </label>
               <input
                 type="file"
