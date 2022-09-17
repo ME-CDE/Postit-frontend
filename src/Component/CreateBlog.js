@@ -111,6 +111,8 @@ const CreatePost = () => {
             name=""
             id=""
             placeholder="Title"
+            minLength={50}
+            maxLength={120}
           />
           <select
             name="categories"
@@ -127,6 +129,7 @@ const CreatePost = () => {
             id=""
             className="w-full h-[568px] max-h-[85vw] border border-[#757575] rounded-md pl-7 pt-4 placeholder:text-[#757575] outline-none"
             placeholder="Write your story......."
+            minLength={500}
           />
           <button
             type="submit"

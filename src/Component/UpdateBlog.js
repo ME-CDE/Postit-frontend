@@ -131,6 +131,8 @@ const UpdateBlog = () => {
                 placeholder="Title"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
+                minLength={50}
+                maxLength={120}
               />
               <select
                 name="categories"
@@ -151,6 +153,7 @@ const UpdateBlog = () => {
                 placeholder="Write your story......."
                 value={content}
                 onChange={(e) => setContent(e.target.value)}
+                minLength={500}
               />
               <button
                 type="submit"
