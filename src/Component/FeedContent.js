@@ -31,12 +31,12 @@ const FeedContent = () => {
           )
         })
       }
-      {!data && 
+      </div>
+      {loading && 
         <div className="w-[86%] xs:w-10/12 mx-auto h-96 flex justify-center items-center">
           <BarLoader height={1.9} cssOverride={{opacity:"0.5"}} width={90} loading={loading}/>
         </div>
       }
-      </div>
     </div>
   )
 }

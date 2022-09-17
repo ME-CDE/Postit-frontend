@@ -21,7 +21,7 @@ const CreatePost = () => {
       Reader.readAsDataURL(imageFile.files[0]);
       Reader.onload = () => {
         setImage(Reader.result);
-        if (imageFile.files[0].size < 10480000) {
+        if (imageFile.files[0].size < 716800) {
           setLogic(true);
         } else {
           setLogic(false);
@@ -53,7 +53,7 @@ const CreatePost = () => {
         });
     }
     if(!logic){
-      alert("Please provide an image less than 1mb")
+      alert("Please provide an image less than 700KB")
     }
   };
   return (
@@ -72,7 +72,7 @@ const CreatePost = () => {
               Cover Image
             </h1>
             <p className=" text-base ml-2">
-              File types supported: JPG, PNG. Max size: 1 MB
+              File types supported: JPG, PNG. Max size: 700KB
             </p>
           </div>
           <div className="w-full flex items-center flex-col">
