@@ -58,7 +58,7 @@ const ReadMore = () => {
       <div className="w-[86%] xs:w-10/12 mx-auto" onLoad={()=>setLoading(false)}>
         <img src={data.coverImage} alt="coverImage" className="w-full rounded-md mt-20 max-h-[90vh]"/>
         <p className="w-max px-3 text-[17px] text-[#FDFEFF] rounded-md mt-[43px]" style={style}>{data.categories}</p>
-        <h1 className="font-bold text-[35px] xxxs:text-[40px] xxs:text-[47px] xs:text-[52px] sm:text-[56px] md:text-[58px] lg:text-[62px] 2xl:w-[1300px] max-w-[100%] leading-[1.1em] mt-[28px] mb-[22.5px] text-primaryBlack">{data.title}</h1>
+        <h1 className="font-bold text-[35px] xxxs:text-[40px] xxs:text-[47px] xs:text-[52px] sm:text-[56px] md:text-[58px] lg:text-[62px] 2xl:w-[1300px] xl:max-w-[90%] leading-[1.1em] mt-[28px] mb-[22.5px] text-primaryBlack">{data.title}</h1>
         <div className="w-full border-b pb-[26.7px] border-[#DDDDDD] mb-14">
         <p className="text-[#9A9A9A] text-[18px] xs:text-[20px] sm:text-[22px] tracking-[0.02em]">By <span className="text-primaryBlack font-medium">{data2.username}</span> <span className=" m-2">-</span>{new Date(data.createdAt).toDateString().substring(4)}</p>
         </div>
