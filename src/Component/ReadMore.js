@@ -62,7 +62,7 @@ const ReadMore = () => {
         <div className="w-full border-b pb-[26.7px] border-[#DDDDDD] mb-14">
         <p className="text-[#9A9A9A] text-[18px] xs:text-[20px] sm:text-[22px] tracking-[0.02em]">By <span className="text-primaryBlack font-medium">{data2.username}</span> <span className=" m-2">-</span>{new Date(data.createdAt).toDateString().substring(4)}</p>
         </div>
-        <p className="mb-[67px] text-[18px] smallest:text-[18px] xxs:text-[20px] xs:text-[22px] sm:text-[24px] md:text-[26px] leading-[1.7em] text-[#7B7B7B]">{data.content}</p>
+        <p className="mb-[67px] text-[18px] smallest:text-[18px] xxs:text-[20px] xs:text-[22px] sm:text-[24px] md:text-[26px] leading-[1.7em] text-[#7B7B7B] break-words">{data.content}</p>
         <p className="mb-[108px] text-[24px] xs:text-[28px] leading-10 text-left">Share Post  :<BsTwitter className="text-[#55ACEE] inline-block ml-[24px]"/><AiFillFacebook className="text-[#395185] inline-block ml-[20px] mr-[20px]"/><RiWhatsappFill className="text-[#00E676] inline-block"/></p>
       </div>
       </>
