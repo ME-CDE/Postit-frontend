@@ -40,7 +40,7 @@ const CreatePost = () => {
         content: e.target[3].value,
         coverImage: image,
       };
-      fetch(`https://postiitt.herokuapp.com/blogs`, {
+      fetch(`https://postiitt.herokuapp.com/${id}/blogs`, {
         method: "POST",
         body: JSON.stringify(body),
         headers: { "Content-Type": "application/json" },
